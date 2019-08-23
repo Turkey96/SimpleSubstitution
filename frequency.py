@@ -1,3 +1,4 @@
+import matplotlib.pyplot as plt
 #TextoCifrado
 ciphertext = "PBFPVYFBQXZTYFPBFEQJHDXXQVAPTPQJKTOYQWIPBVWLXTOXBTFXQWAXBVCXQWAXFQJVWLEQNTOZQGGQLFXQWAKVWLXQWAEBIPBFXFQVXGTVJVWLBTPQWAEBFPBFHCVLXBQUFEVWLXGDPEQVPQGVPPBFTIXPFHXZHVFAGFOTHFEFBQUFTDHZBQPOTHXTYFTODXQHFTDPTOGHFQPBQWAQJJTODXQHFOQPWTBDHHIXQVAPBFZQHCFWPFHPBFIPBQWKFABVYYDZBOTHPBQPQJTQOTOGHFQAPBFEQJHDXXQVAVXEBQPEFZBVFOJIWFFACFCCFHQWAUVWFLQHGFXVAFXQHFUFHILTTAVWAFFAWTEVOITDHFHFQAITIXPFHXAFQHEFZQWGFLVWPTOFFA"
 #Funcion para contar el numero de veces que se repite un caracter
@@ -10,6 +11,9 @@ def frequency(ciphertext):
             all_freq[i] = 1
     #Mostrar resultados
     print ("Numero de repeticiones por caracater:\n "+ str(all_freq))
+    plt.bar(range(len(all_freq)), list(all_freq.values()), align='center')
+    plt.xticks(range(len(all_freq)), list(all_freq.keys()))
+    plt.show()
     return 0
 #Lllamdo de la funcion
 frequency(ciphertext)
