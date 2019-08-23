@@ -17,11 +17,14 @@ def frequency(ciphertext):
     return 0
 #Lllamdo de la funcion
 frequency(ciphertext)
-intab = "ABCDEFGHIJKLNOPQTUVWXYZ"
+#Solo las letras usadas en el Texto cifrado
+#intab = "ABCDEFGHIJKLNOPQTUVWXYZ"
+#Todas las letras
+intab = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 key=input("Inserte llave, notese que los valores introducidos seran relacionados con los caracteres en orden alfabetico y la llave debe ser de la misma extension del numero de caracteres en el texto cifrado\n"+intab+"\n")
 #Datos para crear tabla de traduccion
 
-outtab = key#Clave para descifrar "DHPUWEBRYLKGXFTAOVINSMC"
+outtab = key#Clave para descifrar "DHPUWEBRYLKGXFTAOVINSMC" Clave completa "DHPUWEBRYLKGJXFTAQZOVINSMC"
 #Crear tabla de traduccion
 trantab = str.maketrans(intab, outtab)
 #Texto a traducir
